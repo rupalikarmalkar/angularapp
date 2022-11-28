@@ -1,0 +1,9 @@
+.main{
+    margin-left: 300px;
+    margin-top: 30px;
+    background-color: rgb(240, 117, 164);
+    border: 2px;
+    width: 300px;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -1,0 +1,9 @@
+.main{
+    background-color: rgb(158, 204, 204);
+     border: 1px;
+    border-radius: 5px;
+    width:300px;
+    height: 150px;
+justify-content: center; 
+margin-left: 300px;
+}

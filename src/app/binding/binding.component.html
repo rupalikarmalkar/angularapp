@@ -1,0 +1,12 @@
+<div class="main"><b>Two way Data Binding</b>
+<div class="list">
+    <ul> 
+      <li><label>UserName</label> <input type="text" [(ngModel)]="userName"> </li>
+      <li><label>UserName: {{userName}}</label> </li>&nbsp;
+      <li><input type="Reset" [disabled]="!userName" class="btn btn-primary" (click)="onClickReset()"> </li>
+    </ul>
+    
+</div>
+</div>  
+
+
