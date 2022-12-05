@@ -1,0 +1,14 @@
+.main{
+    margin-left: 200px;
+
+}
+table{
+    background-color: rgb(84, 121, 189);
+    font-size: 15px;
+    font-weight:bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 3px solid black;
+    border-radius: 15px;
+    width: 700px;
+    height: 200px;
+}

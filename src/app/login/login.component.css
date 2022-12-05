@@ -1,0 +1,15 @@
+ .main{
+    
+border-radius: 5px;
+    border: 2px solid black;
+    height: 176px;
+    width: 304px;
+    margin-left: 200px;
+    margin-top: 50px;
+    background-color: rgb(173, 135, 208);
+    font-size: larger;
+    font-family: math;
+}
+.head{
+    background-color: rgb(173, 212, 118);
+} 

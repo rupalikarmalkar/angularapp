@@ -1,33 +1,164 @@
- <div style="text-align:center">
+<!-- <div style="text-align:center"> -->
 <!-- <app-ng-fore-courses></app-ng-fore-courses>
+<app-switch></app-switch>
+-->
 
-  <br>
-  <br>
-  <app-switch></app-switch>
-  
-<br>
- -->
+<!-- <app-attri></app-attri> -->
+<!-- <app-checkbox></app-checkbox> -->
 
-<app-attri></app-attri>
- <!-- <app-checkbox></app-checkbox> -->
-
-  <!-- <h1>
+<!-- <h1>
     Welcome to {{ title }}!
       <app-demo></app-demo>  -->
 
-     <!-- <app-server></app-server>  -->
-  <!-- </h1> -->
-  <!-- <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="> -->
-</div>  
+<!-- <app-server></app-server>  -->
+<!-- </h1> -->
+<!-- <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="> -->
+<!-- </div>   -->
 
- <!-- <app-server></app-server>
+<!-- <app-server></app-server>
  <app-servers></app-servers>
 
 <router-outlet></router-outlet>  -->
- 
+
 
 <!-- <app-directives></app-directives>
 
-<app-ngswitch></app-ngswitch> --> 
- <!-- <app-binding></app-binding>
+<app-ngswitch></app-ngswitch> -->
+<!-- <app-binding></app-binding>
  <app-checkbox></app-checkbox> -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+<!-- <app-login [childVar]="parenthood"></app-login> -/->
+
+<app-inputdecoretor [arrayVar]="employee"></app-inputdecoretor>
+   -->
+<!-- ________________________output deco________________________________________ -->
+
+
+<!--  
+<div >
+  <app-childoutput (foodevent)="getDataFromChild($event)"></app-childoutput>
+
+  <ul *ngFor="let f of foods">
+    <li>{{f}}</li>
+  </ul> -->
+
+
+<!-- Component life cycle Hook -->
+
+<!-- <select (change)="uid=sid.value" #sid>
+    <option selected disabled>No value selected</option>
+    <option [value]="id" *ngFor="let id of [1,2,3,4]">
+      {{id}}
+
+    </option>
+  </select>
+  <app-hook [userid]="uid"></app-hook> ______________________________________________________________________________________________ -->
+
+<!-- <div class="main">  
+  <div class="n">ngonChange Assignment</div>
+  <select (change)="pname=ref.value" #ref>
+  <option selected disabled>No value selected</option>
+    <option [value]="str" *ngFor="let str of ['Rupali','Namita','Jyoti','Surekha']">
+      {{str}}
+
+    </option>
+  </select>
+</div>
+  <app-hookassin [personname]="pname"></app-hookassin> -->
+<!-- Component life cycle Hook ____________________________________________________________________________________________________-->
+<!-- <app-toggleassign></app-toggleassign>    -->
+
+<!-- 
+<div class="row" style="text-align:center;">
+  <div class="col-md-12"><input type="text" placeholder="enter value" (blur)="handleData($event)">
+    <p>Product Name: <input type="text" placeholder="Enter product name" [(ngModel)]="name"></p>
+    <p>Product Price: <input type="text" placeholder="Enter product price" [(ngModel)]="price"></p>
+    <button class="btn btn-primary" (click)="updateProduct()">Update product</button>
+
+    <app-hook [userid]="uid" [parentData]="data" [product]="product">
+
+</app-hook>
+</div>
+</div> -->
+<!-- <app-docheckassin></app-docheckassin>
+<br>
+<br> add Remove-->
+
+
+<!-- <div >
+  <app-childtoparent (empinfo)="getEmpFromChild(this.emp)"></app-childtoparent>
+
+  <table class="table table-striped">
+    <thead>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>DEPARTMENT</th>
+      <th>SALARY</th>
+      <th>COMPANY</th>
+
+
+    </thead>
+    <tbody>
+      <tr  *ngFor="let e of empobject">
+        <td >{{e.id}}</td>
+         <td>{{e.name}}</td>
+
+         <td>{{e.department}}</td>
+         <td>{{e.salary}}</td>
+         <td>{{e.company}}</td>
+
+
+      </tr>
+    </tbody>
+  </table>
+  
+   
+
+
+
+
+
+ 
+   <div class="container">  
+   <table class="table table-striped">
+    
+    <thead >
+        <tr>
+            <th>ID</th>
+            <th>Faculty Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Designation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let f of newData ; let i=index;">
+             {{i+1}}    
+           <td>{{f.id}}</td>
+            <td>{{f.facultyName}}</td>
+            <td>{{f.departmentName}}</td>
+            <td>{{f.salary}}</td>
+            <td>{{f.designation}}</td>
+        </tr>
+    </tbody>
+</table>-->
+<!-- <app-childtoparent (dataOfFaculty)="getDataFromChild($event)"></app-childtoparent>   -->
+   
+
+<!-- <app-childToParent (dataOfFaculty)="getDataFromChild($event)"></app-childtoparent> -->
+ 
+<!-- 
+<div style="margin-left: 200px ;">
+<table class="table table-striped">
+  <tr><td>Book Name</td><td><input type="text"  [(ngModel)]="bName" ></td></tr>
+  <tr><td>Author</td><td><input type="text"  [(ngModel)]="auth"></td></tr>
+  <tr><td>Publication</td><td><input type="text" [(ngModel)]="pub"></td></tr>
+  <tr><td>Date</td><td><input type="text" [(ngModel)]="dt"></td></tr>
+  <tr><td>Edition</td><td><input type="text" [(ngModel)]="ed"></td></tr> 
+</table>
+<button class="btn btn-primary" (click)="btnSave()">Submit</button>
+</div> -->
+<!-- practice only -->
+<app-practice></app-practice>

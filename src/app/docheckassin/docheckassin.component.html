@@ -1,0 +1,50 @@
+<!-- table for input and Buttons -->
+
+<div class="container">
+<br><br>  <br><br>
+    <div>
+
+        <table>
+
+            <tr>
+                <th> Enter the Flowers Name :- </th>
+                <th> <input type="text" #Product></th>
+                <th> <button class="btn btn-primary" (click)="addflowers(Product.value)">Add</button> </th>
+                <th> <button class="btn btn-danger"  style="margin-left: 15px;" (cliclk)="txtClear(Product.value)">Cleare</button>
+                </th>
+            </tr>
+        </table>
+
+    </div>
+
+    <div>
+
+    <div>
+
+        <br><br>
+       
+
+<!-- table for Disply Flowers Details  -->
+        <br>
+        <table class="table table-striped">
+            <thead>
+                <tr style="width: 600px; background-color: rgb(227, 176, 48);">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let fl of flowers  |  slice:0; let i = index;">
+                    <td style="color:blue;"><b>{{i+1}}</b></td>
+                    <td style="color:blue;"><b>{{fl}}</b></td>
+                    <td><button class="btn btn-danger" (click)="Recdelete(i+1)">Remove</button> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+</div>

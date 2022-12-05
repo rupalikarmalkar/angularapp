@@ -29,9 +29,12 @@ people:any[]=[
     "country":"USA"
   }
 ]
+uname;
   constructor() { }
 
   ngOnInit() {
   }
-
+show(value){
+  this.uname = value;
+}
 }
