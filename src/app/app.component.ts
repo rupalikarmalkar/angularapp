@@ -19,10 +19,11 @@ import { Emp } from './decoretor/arrayofobject';
 // }
 export class AppComponent {
    public uid:number;
-   data;
+   data:string='red';
    pname:string;
    name: string;
   price: number;
+  
   
   product: Product = new Product();
 // object used in chilled
@@ -51,7 +52,11 @@ export class AppComponent {
    // console.log(this.bookCollection);
     
   }
- 
+//  appchildExist:boolean=true;
+//    destroy(){
+
+    
+//   }
 
   // employee: Emp[] = [
 

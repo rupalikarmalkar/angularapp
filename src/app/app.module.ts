@@ -26,6 +26,8 @@ import { ToggleassignComponent } from './toggleassign/toggleassign.component';
 import { DocheckassinComponent } from './docheckassin/docheckassin.component';
 import { OnchabhebookComponent } from './onchabhebook/onchabhebook.component';
 import { PracticeComponent } from './practice/practice.component';
+import { SimpleformComponent } from './simpleform/simpleform.component';
+import { FormassinmentComponent } from './formassinment/formassinment.component';
 // import { SharedModule } from './modules/shared/shared.module';
 
 @NgModule({
@@ -52,7 +54,9 @@ import { PracticeComponent } from './practice/practice.component';
     ToggleassignComponent,
     DocheckassinComponent,
     OnchabhebookComponent,
-    PracticeComponent
+    PracticeComponent,
+    SimpleformComponent,
+    FormassinmentComponent
     
     
     

@@ -1,0 +1,97 @@
+<div class="h"> 
+  <div class="head"><b><i>  “Education is not preparation for life; education is life itself.” </i></b>
+
+</div> 
+</div>
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-left rounded shadow py-5">
+      <form (ngSubmit)="OnSubmit(myCollege)" #myCollege="ngForm">
+<!-- --------------------------------------------------ngFormGroup-------------------------------------------------------- -->
+
+        <h1>Student Registration Form</h1>
+
+        <div ngModelGroup="studentDetails" #studentDetails="ngModelGroup">
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputName">Name of Student</label>
+            <input type="text" class="form-control" id="inputName" name="inputName" placeholder=" Enter Name  "[ngModel]="inputName">
+            <small *ngIf="inputName"> Student  name:{{inputName}}</small>
+          </div>
+        <div class="form-group">
+          <label for="EmailAddress"> Email Address</label>
+          <input type="email" class="form-control" email  #email="ngModel" pattern="^[a-zA-z0-9]+@codemind\.[a-zA-Z]+$"   id="EmailAddress" name="EmailAddress" placeholder="abc@gmail.com" ngModel required>
+          <small *ngIf="!email.valid && email.touched">Enter valid email</small>
+
+</div>
+        </div>
+
+        <!-- close group -->
+
+        <div class="form-group col-md-6">
+          <label for="dob">Date of Birth</label>
+          <input type="date" min="2022-12-11" class="form-control" id="dob" name="dob" placeholder="DOB">
+        </div>
+      </div>
+      <div class="form-group">
+        <div *ngFor="let gender of genders" class="custom-control custom-radio">
+         <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}" [ngModel]="defaultGender" class="custom-control-input">
+         <label for="{{gender.id}}" class="custom-control-label">{{gender.value}}</label>
+        </div>
+    </div>
+
+        <div class="form-group">
+          <label for="inputAddress2">Address </label>
+          <input type="text" class="form-control" id="inputAddress2" name="inputAddress2" placeholder="Apartment, studio, or floor" ngModel>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputnum">Contact Number</label>
+            <input type="text" class="form-control" id="inputnum" name="inputnum" placeholder="Enter mobile Number" ngModel>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputCollege">Select College</label>
+            <select id="inputCollege" name="inputCollege" class="form-control" [ngModel] ="defaultCollege">
+              <option value="AES">Adarsh College</option>
+              <option value="Zeal">Zeal College</option>
+              <option value="DYPatil">D Y Patil</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-4">
+            <label for="inputCourse">Select Course</label>
+            <select id="inputCourse" name="inputCourse" class="form-control" [ngModel]="defaultCourse">
+              <option value="MCA">MCA</option>
+              <option value="MBA">MBA</option>
+              <option value="CA">CA</option>
+            </select>
+          </div>
+</div>
+<br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <div class="row justify-content-center mt-2" *ngIf="submitted">
+          <div class="col-md-6 rounded shadow py-4">
+              <h2>Student data</h2>
+              <p> Student name: <strong>{{student.inputName}}</strong></p>
+              <p>Email: <strong>{{student.EmailAddress}}</strong></p>
+              <p>Date of Birth: <strong>{{student.dob}}</strong></p>
+              <p>Contact Number: <strong>{{student.inputAddress2}}</strong></p>
+              <p>Name of College: <strong>{{student.inputnum}}</strong></p>
+              <p>Address: <strong>{{student.inputCollege}}</strong></p>
+              <p>Name of Course: <strong>{{student.inputCourse}}</strong></p>
+              <p>Name of Course: <strong>{{student.gender}}</strong></p>
+
+
+          </div>
+        
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+

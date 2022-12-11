@@ -1,3 +1,14 @@
+<!--form first component1 ---------------------------------------------------------------------->
+<!-- <app-simplefrom></app-simplefrom> -->
+<app-formassinment></app-formassinment>
+
+<!--form first component1 ------------------------------------------------------------------------->
+
+
+
+
+
+
 <!-- <div style="text-align:center"> -->
 <!-- <app-ng-fore-courses></app-ng-fore-courses>
 <app-switch></app-switch>
@@ -70,18 +81,19 @@
 <!-- Component life cycle Hook ____________________________________________________________________________________________________-->
 <!-- <app-toggleassign></app-toggleassign>    -->
 
-<!-- 
-<div class="row" style="text-align:center;">
+
+<!-- <div class="row" style="text-align:center;">
   <div class="col-md-12"><input type="text" placeholder="enter value" (blur)="handleData($event)">
     <p>Product Name: <input type="text" placeholder="Enter product name" [(ngModel)]="name"></p>
     <p>Product Price: <input type="text" placeholder="Enter product price" [(ngModel)]="price"></p>
     <button class="btn btn-primary" (click)="updateProduct()">Update product</button>
 
-    <app-hook [userid]="uid" [parentData]="data" [product]="product">
-
+    <app-hook *ngIf="appchildExist" [userid]="uid" [parentData]="data" [product]="product">
+   <h1> this is content coming from parent Component</h1>
 </app-hook>
 </div>
-</div> -->
+</div> 
+<button class="btn btn-danger" (click)="destroy()">Destroy Component</button> -->
 <!-- <app-docheckassin></app-docheckassin>
 <br>
 <br> add Remove-->
@@ -161,4 +173,4 @@
 <button class="btn btn-primary" (click)="btnSave()">Submit</button>
 </div> -->
 <!-- practice only -->
-<app-practice></app-practice>
+<!-- <app-practice></app-practice> -->
