@@ -32,10 +32,17 @@
         <!-- close group -->
 
         <div class="form-group col-md-6">
-          <label for="dob">Date of Birth</label>
-          <input type="date" min="2022-12-11" class="form-control" id="dob" name="dob" placeholder="DOB">
+           <!-- <label for="dateB">Date of Birth</label>
+          <input type="date" [min]="todaysDate" class="form-control" id="dob" name="dob" placeholder="DOB">  
+          <input type="text"   class="form-control" id="dateB" name="dateB" placeholder="DOB">  -->
+
+          <label for="inputAddress23">Address </label>
+          <input type="text" class="form-control" id="inputAddress23" name="inputAddress23" placeholder="Apartment, studio, or floor" ngModel>
+        
+
         </div>
       </div>
+      
       <div class="form-group">
         <div *ngFor="let gender of genders" class="custom-control custom-radio">
          <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}" [ngModel]="defaultGender" class="custom-control-input">
@@ -55,7 +62,7 @@
           </div>
           <div class="form-group col-md-4">
             <label for="inputCollege">Select College</label>
-            <select id="inputCollege" name="inputCollege" class="form-control" [ngModel] ="defaultCollege">
+            <select id="inputCollege" name="inputCollege" class="form-control " [ngModel] ="defaultCollege">
               <option value="AES">Adarsh College</option>
               <option value="Zeal">Zeal College</option>
               <option value="DYPatil">D Y Patil</option>
@@ -79,12 +86,12 @@
               <h2>Student data</h2>
               <p> Student name: <strong>{{student.inputName}}</strong></p>
               <p>Email: <strong>{{student.EmailAddress}}</strong></p>
-              <p>Date of Birth: <strong>{{student.dob}}</strong></p>
-              <p>Contact Number: <strong>{{student.inputAddress2}}</strong></p>
-              <p>Name of College: <strong>{{student.inputnum}}</strong></p>
-              <p>Address: <strong>{{student.inputCollege}}</strong></p>
+              <p>Date of Birth : <strong>{{student.dob}}</strong></p>
+              <p>Contact Number: <strong>{{student.inputnum}}</strong></p>
+              <p>Name of College: <strong>{{student.inputCollege}}</strong></p>
+              <p>Address: <strong>{{student.inputAddress2}}</strong></p>
               <p>Name of Course: <strong>{{student.inputCourse}}</strong></p>
-              <p>Name of Course: <strong>{{student.gender}}</strong></p>
+              <p> Gender: <strong>{{student.gender}}</strong></p>
 
 
           </div>

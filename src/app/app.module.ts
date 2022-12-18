@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { DemoComponent } from './Demo/demo.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BindingComponent } from './binding/binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
@@ -28,6 +28,10 @@ import { OnchabhebookComponent } from './onchabhebook/onchabhebook.component';
 import { PracticeComponent } from './practice/practice.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import { FormassinmentComponent } from './formassinment/formassinment.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { RegisterComponent } from './register/register.component';
+import { ConfirmEqualValidatorDirective } from './confirm-equal-validator.directive';
 // import { SharedModule } from './modules/shared/shared.module';
 
 @NgModule({
@@ -56,15 +60,19 @@ import { FormassinmentComponent } from './formassinment/formassinment.component'
     OnchabhebookComponent,
     PracticeComponent,
     SimpleformComponent,
-    FormassinmentComponent
-    
+    FormassinmentComponent,
+    ReactiveFormComponent,
+    RegistrationFormComponent,
+    RegisterComponent,
+    ConfirmEqualValidatorDirective
     
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
     // SharedModule
   ],
   providers: [],

@@ -1,0 +1,116 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <form [formGroup]="myRegistration" (ngSubmit)="OnSubmit()">
+                <h1>Registration Form</h1>
+                <!-- group start -->
+                <!-- // <div formGroupName="studentDetails"> -->
+                <div class="form-group">
+                    <label for="firstName"> First Name</label>
+                    <input type="text" formControlName="firstName" class="form-control" id="firstName"
+                        placeholder="First Name">
+                        <small class="text-danger" *ngIf="!myRegistration.get('firstName').valid && myRegistration.get('firstName').touched">at list 5 Characters
+                            <small class="text-danger" *ngIf="myRegistration.get('firstName').errors['required']">write name</small>
+                            <small class="text-danger" *ngIf="myRegistration.get('firstName').errors['minLength']"></small>
+                            <small class="text-danger" *ngIf="myRegistration.get('firstName').errors['maxLength']">not more than 5 Characters</small>
+                            </small>
+
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+
+                    <input type="text" formControlName="lastName" class="form-control" id="lastName"
+                        placeholder="Last Name">
+                     <small class="text-danger"
+                        *ngIf="!myRegistration.get('lastName').valid && myRegistration.get('lastName').touched"> 10 char only
+                        <small class="text-danger" *ngIf="myRegistration.get('lastName').errors['required']">enter last name </small>
+                         <small class="text-danger" *ngIf="myRegistration.get('lastName').errors['maxLength']">max 10 char </small>
+
+                        
+                    </small>
+                </div><br>
+
+                <div class="form-group">
+                    <label for="email">Enter Email</label>
+                    <input type="text" formControlName="email" class="form-control" id="email" placeholder="Email">
+                    <small class="text-danger"
+                        *ngIf="myRegistration.get('email').invalid && myRegistration.get('email').touched">
+                        Enter valid email
+                    </small>
+
+                </div><br>
+                <!-- </div> -->
+
+
+
+
+                <!-- group end -->
+                <div class="form-group">
+                    <label for="age">Age</label>
+
+                    <input type="text" formControlName="age" class="form-control" id="age" placeholder="Age">
+                    <!-- <small class="text-danger" *ngIf="myRegistration.get('age').errors['ageAllowed']"> User name not allowed {{myRegistration.get('age').value}}</small> -->
+
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Enter Phone Number</label>
+
+                    <input type="text" formControlName="phone" class="form-control" id="phone"
+                        placeholder="Phone Number">
+                        <small class="text-danger" *ngIf="myRegistration.get('phone').errors['pattern']">Please valid number</small>
+                        <small class="text-danger" *ngIf="myRegistration.get('phone').errors['maxLength']">Please valid number</small>
+
+                </div>
+                <div class="form-group">
+                    <label for="city">Select city</label>
+                    <select class="form-control" formControlName="city" id="city" >
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Delhi">Delhi</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <div *ngFor="let gender of genders" class="custom-control custom-radio">
+                        <input type="radio" id="{{gender.id}}" formControlName="gender" value="{{gender.value}}"
+                            class="custom-control-input">
+                        <label for="{{gender.id}}" class="custom-control-label">{{gender.value}}</label>
+
+                        <small class="text-danger" *ngIf="!myRegistration.get('gender').errors['required']">
+                            </small>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Enter Password</label>
+
+                    <input type="password" formControlName="password" class="form-control" id="password"
+                        placeholder="Enter password">
+
+                        <!-- <small class="text-danger"
+                          *ngIf="!myRegistration.get('password').valid && myRegistration.get('password').touched">   -->
+                        <small class="text-danger" *ngIf="!myRegistration.get('password').errors['required']">Please
+                            enter password</small>
+                        <!-- </small> -->
+                </div>
+                <div class="form-group">
+                    <label for="pswConfirm">Confirm Password</label>
+
+                    <input type="password" formControlName="pswConfirm" class="form-control" id="pswConfirm"
+                        placeholder="confirm password">
+
+                        <!-- <small class="text-danger"
+                        *ngIf="!myRegistration.get('pswConfirm').valid && myRegistration.get('pswConfirm').touched"> -->
+                        <small class="text-danger" *ngIf="!myRegistration.get('pswConfirm').errors['required']">Please
+                            confirm password</small>
+                        <!-- </small> -->
+                </div>
+
+                <button class="btn btn-success mt-4">submit</button>
+
+            </form>
+        </div>
+    </div>
+</div>

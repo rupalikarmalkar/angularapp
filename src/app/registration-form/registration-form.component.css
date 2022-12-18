@@ -1,0 +1,16 @@
+
+ input.ng-invalid.ng-touched {
+    border: 1px solid red;
+    box-shadow: 0 0 13px #ff000021;
+}
+.container{
+    /* background-image:url('C:\Users\hp\Desktop\bagr.jpg'); */
+    background-color: rgb(127, 127, 212);
+    border: 3px solid black;
+    border-radius: 15px;
+}
+form{
+    border: 5px solid blue;
+    border-radius: 15px;
+    background-color: rgb(196, 161, 115);
+}

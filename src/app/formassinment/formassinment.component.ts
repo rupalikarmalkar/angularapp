@@ -15,34 +15,35 @@ export class FormassinmentComponent implements OnInit {
 
   student = new Student();
   defaultGender:string="Male";
-
+   currentDate:any=new Date();
   genders=[
     {id:'1',value:'Male'},
     {id:'2',value:'Female'},
 
   ]
-  
+  // todaysDate:Date=new Date();
+dateofb:string ='';
   constructor() { }
 
   ngOnInit() {
   }
   OnSubmit(form:NgForm) {
-    // console.log(form.value);
+     console.log(form.value);
     this.submitted=true
 
       this.student.inputName= form.value.studentDetails.inputName;
       this.student.EmailAddress = form.value.studentDetails.EmailAddress;
-      this.student.dob = form.value.dob;
+       this.student.dob = form.value.inputAddress23; 
+       this.dateofb = form.value.dateB; 
       this.student.inputAddress2 = form.value.inputAddress2;
       this.student .gender = form.value.gender;
-
       this.student.inputnum = form.value.inputnum;
       this.student.inputCollege = form.value.inputCollege;
       this.student.inputCourse = form.value.inputCourse;
 
 
   
-    //  this.saveStudentData(this.student);
+  //this.saveStudentData(this.student);
       }
 
 
