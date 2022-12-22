@@ -1,0 +1,95 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+
+
+            <form (ngSubmit)="OnSubmit(myRegistrationForm)" #myRegistrationForm="ngForm">
+                <div class="form-group">
+          <!-- <label for="fName">First Name</label>
+          <input type="text" class="form-control" id="fName"  name="fName"   placeholder="First Name" #fName="ngModel" [(ngModel)]="fName.fName" required> -->
+          <label for="fName">First Name</label>
+          <input type="text" id="fName" name="fName"  #fName="ngModel" placeholder="enter your First Name" class="form-control" required [(ngModel)]="fName.fName">
+          <div class="text-danger" *ngIf="fName.invalid && fName.touched">First Name is required</div>
+          <div *ngIf="fName.fName?.length >5" class="text-danger">First Name is not more than 5 character</div>
+          <!-- <div *ngIf="First Name.firstname?.length <5" class="text-danger">First Name is not contain less then 5 character</div> -->
+        </div>
+        <!-- </div>                   -->
+        <div class="form-group ">
+          <label for="lName">Last Name</label>
+          <input type="text" class="form-control" id="lName"  name="lName"  placeholder="Last Name" #lName="ngModel" [(ngModel)]="lName.lName" required>
+          <div class="text-danger" *ngIf="lName.invalid && lName.touched">Last Name is required</div>
+          <div *ngIf="lName.lName?.length >=10" class="text-danger">Last Name is not more than 10 character</div>
+          
+        </div>
+      
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" id="email"  name="email"   placeholder="Email" #email="ngModel" [(ngModel)]="email.email" required
+          >
+          <div class="text-danger" *ngIf="email.invalid && email.touched">Email is required</div>
+          <div *ngIf="email.email?.email" class="text-danger"> please enter valid email</div>
+          
+        </div>
+        <div class="form-group">
+          <label for="mobile">Contact Number</label>
+          <input type="number" class="form-control" id="mobile"  name="mobile"  placeholder="Mobile number" >
+          <div class="text-danger" *ngIf="mobile.invalid && mobile.touched">Email is required</div>
+          <div *ngIf="mobile.mobile?.length< 10 " class="text-danger"> please enter number</div>
+          
+        </div>
+
+        <div class="form-group">
+
+        <label for="age">Age</label>
+                        <input type="number" name="age" id="age" class="form-control" >
+                        <div *ngIf="age.invalid && age.touched">Age is required</div>
+                        <div *ngIf="age.age<17">Age is not less than 17</div>
+                        <div *ngIf="age.age>20">Age is not more than 20</div>
+                        </div>
+
+        <div class="form-group">
+            <div *ngFor="let gender of genders" class="custom-control custom-radio">
+             <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}"  class="custom-control-input" >
+             <label for="{{gender.id}}" class="custom-control-label">{{gender.value}}</label>
+            </div>gender
+        </div>
+        <div class="form-group">
+            <label for="city">Select city</label>
+            <select class="form-control" formControlName="city" id="city" ngModel>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Delhi">Delhi</option>
+            </select>
+        </div>
+        <div class="form-group ">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password"  name="password"  placeholder="Enter Password" #password="ngModel" [(ngModel)]="password.password">
+        </div>
+        <div class="form-group ">
+            <label for="conPassword">Confirm Password</label>
+            <input type="password" class="form-control" id="conPassword"  name="conPassword"  placeholder="Confirm Password" #conPassword="ngModel" [(ngModel)]="conPassword.conPassword">
+        </div>
+        <button class="btn btn-success mt-4">submit</button> -->
+        <!-- <div class="form-group">
+            <label for="passsword">Password</label>
+            <input type="password" id="password" formControlName="password" class="form-control" placeholder="enter your password" #password="ngModel" [(ngModel)]="password.password">
+            <div *ngIf="!password.valid && password.touched" class="text-danger">
+                <div *ngIf="password.errors?.required">Password is required</div>
+
+            </div>
+
+        </div> -->
+
+        <!-- <div class="form-group">
+            <label for="conPassword">Confirm Password</label>
+            <input type="password" id="conPassword" formControlName="conPassword" class="form-control" appConfirmEqualValidator="password" placeholder="enter your pswConfirm" #conPassword="ngModel" [(ngModel)]="conPassword.conPassword" >
+            <div *ngIf="conPassword.invalid && conPassword.touched" class="text-danger">
+                <div *ngIf="conPassword.errors?.required"> Confirm Password is required</div>
+                <div *ngIf="conPassword.errors?.notEqual"> Confirm Password mismatch</div>
+            </div>
+        </div> --> 
+
+</form>
+         </div> 
+    </div>
+</div>

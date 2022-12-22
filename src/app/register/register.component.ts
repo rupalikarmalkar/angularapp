@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
   }
+
   registerForm = new FormGroup({
     firstName:new FormControl('',Validators.compose([Validators.required,Validators.minLength(5),Validators.maxLength(5)])),
     lastName:new FormControl('',Validators.compose([Validators.required,Validators.maxLength(10)])),
@@ -68,4 +69,5 @@ export class RegisterComponent implements OnInit {
     get pswConfirm():FormControl{
       return this.registerForm.get("pswConfirm") as FormControl;
     }
+
 }

@@ -32,8 +32,22 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { RegisterComponent } from './register/register.component';
 import { ConfirmEqualValidatorDirective } from './confirm-equal-validator.directive';
+import { RegistrationTemplateFormComponent } from './registration-template-form/registration-template-form.component';
+import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
+import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
 // import { SharedModule } from './modules/shared/shared.module';
-
+import { HttpClientModule} from '@angular/common/http';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
+import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
+import { CountPipe } from './count.pipe';
+import { PracticePipeComponent } from './practice-pipe/practice-pipe.component';
+import { PracticePipe } from './practice.pipe';
+import { Compassin1Component } from './compassin1/compassin1.component';
+import { Compassin2Component } from './compassin2/compassin2.component';
+import { ProjectassinformComponent } from './projectassinform/projectassinform.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,7 +78,21 @@ import { ConfirmEqualValidatorDirective } from './confirm-equal-validator.direct
     ReactiveFormComponent,
     RegistrationFormComponent,
     RegisterComponent,
-    ConfirmEqualValidatorDirective
+    ConfirmEqualValidatorDirective,
+    RegistrationTemplateFormComponent,
+    Servicecomp1Component,
+    Servicecomp2Component,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component,
+    PipeDemoComponent,
+    CountPipe,
+    PracticePipeComponent,
+    PracticePipe,
+    Compassin1Component,
+    Compassin2Component,
+    ProjectassinformComponent,
     
     
   ],
@@ -72,7 +100,8 @@ import { ConfirmEqualValidatorDirective } from './confirm-equal-validator.direct
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
     // SharedModule
   ],
   providers: [],

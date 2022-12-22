@@ -1,0 +1,43 @@
+<!-- <p>practice-pipe works!</p> -->
+<div class="container ">
+  <div>
+<h1>Angular Pipe</h1><br>
+<div>
+    Custom pipe
+    <ul> 
+        <li> 30 USD TO INR  :- {{30|practice:72}}</li>
+        <li> 30 ERO TO INR  :- {{30|practice:87}}</li>
+        <li> 30 GBP TO INR  :- {{30|practice:99}}</li>
+</ul>
+</div>
+
+<div> 
+    Using slice
+    <ul> 
+   <li> Fruits Array :-{{Fruits}}</li> 
+   <li>   Fruits slice:2 :- {{Fruits | slice:2}}</li>
+   <li>    Fruits slice:1:4:- {{Fruits | slice:1:4}} </li>
+   <li>    Fruits slice:-2:- {{Fruits | slice:-2}} </li>
+   <li>Fruits slice:-4:-2-  {{Fruits | slice:-4:-2}} </li>
+</ul>
+ </div>
+<div>
+    Uppercase-Lowercase
+    <ul>
+        <li>{{sName}}</li>
+        <li>{{sName | uppercase}}</li>
+        <li>{{sName | lowercase }}</li>
+
+    </ul>
+</div>
+
+<div>
+    json pipe
+    <ul>
+        <li>{{obje | json}}</li>
+    </ul>
+</div>
+
+ 
+</div>
+</div>

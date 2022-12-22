@@ -11,10 +11,10 @@
                     <div class="form-text text-danger" *ngIf="firstName.errors['required'] && (firstName.touched || firstName.dirty)">
                         First name is Required
                     </div>
-                    <div class="form-text text-danger" *ngIf="!firstName.errors['minLength'] && ( firstName.dirty)">
+                    <div class="form-text text-danger" *ngIf="!firstName.errors['minLength'] && (firstName.dirty)">
                      <b>  First name  is too short</b>                     
                      </div>
-                    <div class="form-text text-danger" *ngIf="!firstName.errors['maxLength'] && ( firstName.dirty)">
+                    <div class="form-text text-danger" *ngIf="!firstName.errors['maxLength'] && (firstName.dirty)">
                         First name  is more than 5 char
                     </div>
 

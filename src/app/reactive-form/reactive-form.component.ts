@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormArrayName, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormArrayName, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { promise } from 'protractor';
 import { Observable } from 'rxjs';
 import { resolve } from 'url';
@@ -12,6 +12,8 @@ import { Employee } from '../models/emoloyee';
 }) 
 export class ReactiveFormComponent implements OnInit {
 submitted:boolean=false;
+
+
 // employee = new Employee();
 
 
@@ -25,7 +27,7 @@ notAllowedName = ['Codemind','Technology'];
 
   ]
 
-  constructor() { 
+  constructor(private _fb:FormBuilder) { 
     this.createForm();
    }
 
@@ -61,19 +63,29 @@ notAllowedName = ['Codemind','Technology'];
 
   }
   createForm(){
-    this.myReactiveForm= new FormGroup({
-      'userDetails':new FormControl({
-        'username':new FormControl('',[Validators.required,this.NaName.bind(this)]),
-        'email':new FormControl('',[Validators.required,Validators.email],this.NaEmail)
-      }),
+    // this.myReactiveForm= new FormGroup({
+    //   'userDetails':new FormControl({
+    //     'username':new FormControl('',[Validators.required,this.NaName.bind(this)]),
+    //     'email':new FormControl('',[Validators.required,Validators.email],this.NaEmail)
+    //   }),
       
-      'course':new FormControl(''),
-      'gender':new FormControl('Male'),
-      'skills':new FormArray([
-        new FormControl(null,Validators.required)
-      ])
+    //   'course':new FormControl(''),
+    //   'gender':new FormControl('Male'),
+    //   'skills':new FormArray([
+    //     new FormControl(null,Validators.required)
+    //   ])
 
+    // })
+    this.myReactiveForm = this._fb.group({
+      userDetails: this._fb.group({
+        username: ['', Validators.required],
+        email: ['', Validators.required]
+      }),
+      course: ['Angular'],
+      gender: ['Male'],
+      skills: this._fb.array([])
     })
+
   }
   OnSubmit(){
     this.submitted=true;
@@ -85,8 +97,11 @@ notAllowedName = ['Codemind','Technology'];
     
   }
   OnAddSkills(){
-   (<FormArray>this.myReactiveForm.get('skills')).push(new FormControl(null,Validators.required))
+   (<FormArray>this.myReactiveForm.get('skills')).push(new FormControl(null,Validators.required));
   
+  }
+  removeFormControl(index:number):void{
+    (<FormArray> this.myReactiveForm.get('skills')).removeAt(index); 
   }
   NaName(control:FormControl){
     if(this.notAllowedName.indexOf(control.value)!== -1){

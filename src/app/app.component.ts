@@ -3,6 +3,7 @@ import { Book } from './Books/book';
 import { Product } from './courses/product';
 // import { Parents } from './deco/decoretor';
 import { Emp } from './decoretor/arrayofobject';
+import { DemoService } from './service/demo.service';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,27 @@ import { Emp } from './decoretor/arrayofobject';
 //   Ed:string; 
 // }
 export class AppComponent {
+userData:any=[];
+
+  constructor(private _demoService: DemoService){
+
+  }
+
+  ngOnInit(): void {
+    this._demoService.getUsersData().subscribe(data => 
+      {
+        console.log('getting data from api', data);
+        this.userData=data;
+      });
+
+      this._demoService.getDataPosts().subscribe(res =>
+        {
+        console.log('posts', res);
+        
+      });
+
+    }
+  
    public uid:number;
    data:string='red';
    pname:string;

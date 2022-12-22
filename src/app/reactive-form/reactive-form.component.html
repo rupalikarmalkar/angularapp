@@ -3,20 +3,23 @@
     <div class="row justify-content-center">
         <div class="col-md-6 text-left rounded shadow py-5">
             <form [formGroup]="myReactiveForm" (ngSubmit)="OnSubmit()">
+                <h3>Add and Remove Skills</h3>
 <!-- form group start -->
                 <div formGroupName="userDetails">              
 
-                <div class="form-group">
-                    <input type="text" formControlName="username" class="form-control" id="username" placeholder="Enter user name">
-                    <small class="text-danger" *ngIf="!myReactiveForm.get('userDetails.username').valid && myReactiveForm.get('userDetails.username').touched">
-                        <small class="text-danger" *ngIf="myReactiveForm.get('userDetails.username').errors['required']">Please enter user name</small>
-                        <small class="text-danger" *ngIf="myReactiveForm.get('userDetails.username').errors['namesNotAllowed']"> User name not allowed {{myReactiveForm.get('userDetails.username').value}}</small>
-
-                    </small>
+                    <div class="form-group">
+                        <label>User Name</label>
+                        <input type="text" formControlName="username" class="form-control" id="username" placeholder="Enter user name">
+                        <small class="text-danger" *ngIf="!myReactiveForm.get('userDetails.username').valid && myReactiveForm.get('userDetails.username').touched">
+                            <small class="text-danger" *ngIf="myReactiveForm.get('userDetails.username').errors['required']">Please enter user name</small>
+                            <small class="text-danger" *ngIf="myReactiveForm.get('userDetails.username').errors['namesNotAllowed']"> User name not allowed {{myReactiveForm.get('userDetails.username').value}}</small>
+    
+                        </small>
 
 
                 </div>
                 <div class="form-group">
+                    <label>Email</label>
                     <input type="text" formControlName="email" class="form-control" id="email" placeholder="Enter email">
                     <small class="text-danger" *ngIf="myReactiveForm.get('userDetails.email').invalid && myReactiveForm.get('userDetails.email').touched">
                     <small class="text-danger" *ngIf="myReactiveForm.get('userDetails.email').errors['emailNotAllowed']"> User name not allowed {{myReactiveForm.get('userDetails.email').value}}</small>
@@ -47,6 +50,14 @@
 
                 <div class="form-group" formArrayName="skills">
                     <label>Skills</label><br>
+
+                    <ng-container *ngFor="let skill of this.myReactiveForm.get('skills').controls;index as i">
+                        <input type="text" class="form-control mt-2" formControlName="{{i}}" placeholder=""> 
+                      <button class="btn btn-danger" (click)="removeFormControl(i)">Remove Skills </button><br>
+    
+                    </ng-container>
+                    
+
                     <ng-container  *ngFor="let skill of this.myReactiveForm.get('skills').controls;index as i">
                         <input type="text" class="form-control mt-2 " formControlName="{{i}}" placeholder="Add Skills">
                     </ng-container>
