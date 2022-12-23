@@ -9,7 +9,7 @@ import { UtilityService } from '../service/utility.service';
 export class PipeDemoComponent implements OnInit {
   price : number = 80000;
  todaysDate= new Date();
- obj = { id:'101',nmae:'test1'}
+ obj = { id:'101',name:'test1'}
  obser;
   constructor(private _utilityService:UtilityService) { 
     this.obser = this._utilityService.userName;

@@ -48,6 +48,10 @@ import { PracticePipe } from './practice.pipe';
 import { Compassin1Component } from './compassin1/compassin1.component';
 import { Compassin2Component } from './compassin2/compassin2.component';
 import { ProjectassinformComponent } from './projectassinform/projectassinform.component';
+import { FilterpipeComponent } from './filterpipe/filterpipe.component';
+import { FilterPipe } from './filter.pipe';
+import { CustompipeassinComponent } from './custompipeassin/custompipeassin.component';
+import { GenderPipe } from './gender.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -93,6 +97,10 @@ import { ProjectassinformComponent } from './projectassinform/projectassinform.c
     Compassin1Component,
     Compassin2Component,
     ProjectassinformComponent,
+    FilterpipeComponent,
+    FilterPipe,
+    CustompipeassinComponent,
+    GenderPipe,
     
     
   ],

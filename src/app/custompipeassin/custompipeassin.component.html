@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <!-- <div class="col-md-8 form-inline mb-2">
+         <label for="productid"> Search by product</label>
+        <input type="text" class="form-control" id="productid" placeholder="Enter product name" [(ngModel)]="namesearch"> -->
+    <!-- </div> --> 
+    <div class="col-md-8">
+        <table  class="table table-striped table-dark">
+             <thead>
+                <tr>
+                    <th scope="col">Emp.ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Salary</th>
+
+                </tr>
+             </thead>   
+             <tbody>
+                <tr *ngFor="let emp of employeeArr">
+                    <th scope="row">{{emp.id}}</th>
+                    <td>{{emp.name  | gender:emp.gender}}</td>
+                    <td>{{emp.gender}}</td>
+                    <td>{{emp.dept}}</td>
+                    <td>{{emp.salary}}</td>
+
+
+  
+
+                </tr>
+             </tbody>
+        </table>
+    </div>
+</div>
