@@ -52,6 +52,18 @@ import { FilterpipeComponent } from './filterpipe/filterpipe.component';
 import { FilterPipe } from './filter.pipe';
 import { CustompipeassinComponent } from './custompipeassin/custompipeassin.component';
 import { GenderPipe } from './gender.pipe';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { ProductComponent } from './product/product.component';
+import { HomeComponent } from './home/home.component';
+import { LoginnComponent } from './loginn/loginn.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { TabletComponent } from './product/tablet/tablet.component';
+import { TvComponent } from './product/tv/tv.component';
+import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
+import { DemopostComponent } from './demopost/demopost.component';
+import { PostdetailsComponent } from './postdetails/postdetails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -101,6 +113,18 @@ import { GenderPipe } from './gender.pipe';
     FilterPipe,
     CustompipeassinComponent,
     GenderPipe,
+    AboutusComponent,
+    ContactusComponent,
+    ProductComponent,
+    HomeComponent,
+    LoginnComponent,
+    PagenotfoundComponent,
+    LaptopComponent,
+    TabletComponent,
+    TvComponent,
+    WashingmachineComponent,
+    DemopostComponent,
+    PostdetailsComponent,
     
     
   ],

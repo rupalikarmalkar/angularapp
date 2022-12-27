@@ -8,6 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   // repeatPass:string='none';
+  
   genders=[
     {id:'1',value:'Male'},
     {id:'2',value:'Female'},

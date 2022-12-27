@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./custompipeassin.component.css']
 })
 export class CustompipeassinComponent implements OnInit {
-genderfix='string';
 employeeArr:any[]=[
  {
   id:1,
