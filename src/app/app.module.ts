@@ -54,16 +54,17 @@ import { CustompipeassinComponent } from './custompipeassin/custompipeassin.comp
 import { GenderPipe } from './gender.pipe';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { ProductComponent } from './product/product.component';
+// import { ProductComponent } from './product/product.component';
 import { HomeComponent } from './home/home.component';
 import { LoginnComponent } from './loginn/loginn.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { LaptopComponent } from './product/laptop/laptop.component';
-import { TabletComponent } from './product/tablet/tablet.component';
-import { TvComponent } from './product/tv/tv.component';
-import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
+
 import { DemopostComponent } from './demopost/demopost.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
+import { UtilityModule } from './models/utility.module';
+import { FashionComponent } from './fashion/fashion.component';
+import { FashionsModule } from './fashion/fashions/fashions.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,7 +78,7 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
     NgForeCoursesComponent,
     CheckboxComponent,
     AttriComponent,
-    CustdirDirective,
+    // CustdirDirective,
     LoginComponent,
     LogindirDirective,
     InputdecoretorComponent,
@@ -115,28 +116,37 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
     GenderPipe,
     AboutusComponent,
     ContactusComponent,
-    ProductComponent,
     HomeComponent,
     LoginnComponent,
     PagenotfoundComponent,
-    LaptopComponent,
-    TabletComponent,
-    TvComponent,
-    WashingmachineComponent,
+    
     DemopostComponent,
     PostdetailsComponent,
+    FashionComponent,
+    
     
     
   ],
   imports: [
+
     BrowserModule,
+   
+    FashionsModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    UtilityModule,
+    
+
+
     // SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor() {
+    console.log('App module is called');
+  }
+}
