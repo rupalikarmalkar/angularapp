@@ -1,0 +1,18 @@
+<h2 [ngClass]="{'one':true,'two':false,'three':true}">Select Country</h2>
+<select (change)="SetDropDownValue($event)">
+    <option value="">Select</option>
+    <option value="In">In</option>
+    <option value="US">US</option>
+    <option value="UK">UK</option>
+</select>
+<h2 [ngClass]="['one', 'two','three']">you have selected</h2>
+<div [ngSwitch]='dropDownValue'>
+    <h3 *ngSwitchCase="'In'">india</h3>
+    <h3 *ngSwitchCase="'US'">US</h3>
+    <h3 *ngSwitchCase="'Uk'">Uk</h3>
+    <h3 *ngSwitchDefault="" [ngStyle]="AddStyle()">You have not selected Country</h3>
+</div>
+
+<div>
+    <button [ngStyle]="AddStyle()">Click Me</button>
+</div>

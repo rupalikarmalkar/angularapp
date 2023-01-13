@@ -36,7 +36,7 @@ ProductComponent
   ]
 })
 export class ProductsModule { 
-  constructor() {
-    console.log('ProductsModule loaded');
-  }
+  // constructor() {
+  //   console.log('ProductsModule loaded');
+  // }
 }

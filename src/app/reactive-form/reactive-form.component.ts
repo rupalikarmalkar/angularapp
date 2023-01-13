@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormArrayName, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { promise } from 'protractor';
-import { Observable } from 'rxjs';
+import { from, interval, Observable } from 'rxjs';
 import { resolve } from 'url';
 import { Employee } from '../models/emoloyee';
-
+import { FireBasePost } from '../models/firebasePost';
+import { FirebaseService } from '../service/firebase.service';
+import {filter, map, take, takeLast, toArray} from 'rxjs/operators'
+import { loadavg } from 'os';
 @Component({
   selector: 'app-reactive-form',
   templateUrl: './reactive-form.component.html',
@@ -16,7 +19,7 @@ submitted:boolean=false;
 
 // employee = new Employee();
 
-
+firebasePost:FireBasePost;
 
 notAllowedName = ['Codemind','Technology'];
 
@@ -27,11 +30,88 @@ notAllowedName = ['Codemind','Technology'];
 
   ]
 
-  constructor(private _fb:FormBuilder) { 
+  constructor(private _fb:FormBuilder,private _fiebaseService:FirebaseService) { 
     this.createForm();
    }
 
   ngOnInit() {
+
+    this._fiebaseService.getPostDataFirebase().subscribe(res=>{
+      console.log(`getPostDataFirebase`,res);
+      
+    })
+
+  console.log(`filter operator`);
+  
+filter
+ const data = from(this._fiebaseService.users) ;
+ data.pipe(
+  filter(u=>u.gender == 'Male'), 
+  toArray()
+   ).subscribe(res =>{
+     console.log('filter operator',res);
+    
+   }) 
+
+// console.log(`------take operator-----`);
+
+                //take operator
+    const source= interval(1000); 
+         source.pipe(
+           take(5)
+        ).subscribe(res =>{
+  console.log('interval example',res);
+  
+ })
+
+// console.log(`------last operator------`);
+
+           //take last
+       let randomsName =['rupali','html','Angular','css','codemind','javascript']   
+const sourcee= from(randomsName)
+source.pipe(
+  takeLast(2)
+  ).subscribe(res=>{
+    console.log('take last operator',res);
+    
+  })
+
+  // console.log(`------map operator-----`);
+
+const dataa = from(this._fiebaseService.users) ;
+data.pipe(
+  map(x=>x.name + ''+'')
+).subscribe(res=>{
+  console.log('res map',res);
+   })
+
+    data.subscribe(res=>{
+      console.log('example of from operator',res);
+      
+    })
+
+
+// pipe combine multiple operator
+
+// this._fiebaseService.getPostDataFirebase().pipe(
+//   //map manupulate operator data
+//   map(responseData =>{
+//     //empty array
+//     const postArray=[];
+//     for(const key in responseData){
+//       if(responseData.hasOwnProperty(key)){
+//         //push new value
+//         postArray.push({...responseData[key],id:key})
+//       }
+//     }
+//     return postArray;
+//   })
+// )
+//  .subscribe(res=>{
+//    console.log('get data from firebase',res);
+  
+//  })
+
     // setTimeout(()=>{
     //   this.myReactiveForm.setValue({
     //     'userDetails':{
@@ -88,8 +168,21 @@ notAllowedName = ['Codemind','Technology'];
 
   }
   OnSubmit(){
+    //this.submitted=true;
+    // console.log(this.myReactiveForm);
     this.submitted=true;
-     console.log(this.myReactiveForm);
+this.firebasePost=new FireBasePost();
+this.firebasePost.username=this.myReactiveForm['controls'].userDetails['controls'].username.value;
+this.firebasePost.email=this.myReactiveForm['controls'].userDetails['controls'].email.value;
+this.firebasePost.course=this.myReactiveForm['controls'].course.value;
+this.firebasePost.gender=this.myReactiveForm['controls'].gender.value;
+this.firebasePost.skill=this.myReactiveForm['controls'].skills.value;
+// console.log('firebase post class',this.firebasePost);
+ this._fiebaseService.createPostDataReactiveForm(this.firebasePost).subscribe(res=>{
+  console.log('post firebase',res);
+  
+ });
+
     // this.employee .course = this.myReactiveForm.value.course;
     // this.employee .username = form.value.userDetails.username;
     // this.employee .email = form.value.userDetails.email;

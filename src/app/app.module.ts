@@ -36,7 +36,8 @@ import { RegistrationTemplateFormComponent } from './registration-template-form/
 import { Servicecomp1Component } from './servicecomp1/servicecomp1.component';
 import { Servicecomp2Component } from './servicecomp2/servicecomp2.component';
 // import { SharedModule } from './modules/shared/shared.module';
-import { HttpClientModule} from '@angular/common/http';
+import {NO_ERRORS_SCHEMA} from '@angular/core';
+import { HttpClientModule, HttpHeaders} from '@angular/common/http';
 import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
 import { Comp3Component } from './comp3/comp3.component';
@@ -64,6 +65,19 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
 import { UtilityModule } from './models/utility.module';
 import { FashionComponent } from './fashion/fashion.component';
 import { FashionsModule } from './fashion/fashions/fashions.module';
+import { RapidapiComponent } from './rapidapi/rapidapi.component';
+import { ProductnavbarComponent } from './productnavbar/productnavbar.component';
+import { TimepassComponent } from './timepass/timepass.component';
+import { FirebaseComponent } from './firebase/firebase.component';
+import { AdduserComponent } from './adduser/adduser.component';
+import { RevisionstrComponent } from './revisionstr/revisionstr.component';
+import { ProductManageAssComponent } from './product-manage-ass/product-manage-ass.component';
+import { RevisionSwitchComponent } from './revision-switch/revision-switch.component';
+import { RevisionParentComponent } from './revision-parent/revision-parent.component';
+import { RevisionChildComponent } from './revision-child/revision-child.component';
+import { RevisionPipeComponent } from './revision-pipe/revision-pipe.component';
+import { RevisionTempFormComponent } from './revision-temp-form/revision-temp-form.component';
+// import { ValidateEqualModule } from 'ng-validate-equal';
 
 @NgModule({
   declarations: [
@@ -123,30 +137,44 @@ import { FashionsModule } from './fashion/fashions/fashions.module';
     DemopostComponent,
     PostdetailsComponent,
     FashionComponent,
+    RapidapiComponent,
+    ProductnavbarComponent,
+    TimepassComponent,
+    FirebaseComponent,
+    AdduserComponent,
+    RevisionstrComponent,
+    ProductManageAssComponent,
+    RevisionSwitchComponent,
+    RevisionParentComponent,
+    RevisionChildComponent,
+    RevisionPipeComponent,
+    RevisionTempFormComponent,
     
     
     
   ],
   imports: [
-
+    
     BrowserModule,
-   
+    //  ValidateEqualModule,
     FashionsModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     UtilityModule,
+    // HttpHeaders
     
 
 
     // SharedModule
   ],
+  schemas:[NO_ERRORS_SCHEMA], 
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
-  constructor() {
-    console.log('App module is called');
-  }
+  // constructor() {
+  //   console.log('App module is called');
+  // }
 }

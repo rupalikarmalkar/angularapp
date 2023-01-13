@@ -17,6 +17,7 @@ export class LoginnComponent implements OnInit {
    var output =this._authService.checkUserNameandPassword(uname,pwd);
    if(output==true){
     window.alert('Login sucessfully')
+    this._route.navigate(['product'])
    }else{
     window.alert('Invalid username and passwerd')
 

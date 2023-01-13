@@ -14,8 +14,8 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class OrdersRoutingModule {
-  constructor(){
-    console.log('OrdersRoutingModule loading');
+  // constructor(){
+  //   console.log('OrdersRoutingModule loading');
     
-  }
+  // }
 }

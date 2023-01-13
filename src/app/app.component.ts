@@ -4,6 +4,7 @@ import { Product } from './courses/product';
 // import { Parents } from './deco/decoretor';
 import { Emp } from './decoretor/arrayofobject';
 import { DemoService } from './service/demo.service';
+import { PostService } from './service/post.service';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,7 @@ import { DemoService } from './service/demo.service';
 export class AppComponent {
 userData:any=[];
 
-  constructor(private _demoService: DemoService){
+  constructor(private _demoService: DemoService, private _postservice :PostService){
 
   }
 
@@ -38,6 +39,13 @@ userData:any=[];
         
       });
 
+    }
+
+    DeletePost(){
+      this._postservice.deletePostById(1).subscribe(res =>{
+        console.log(res);
+        
+      })
     }
   
    public uid:number;

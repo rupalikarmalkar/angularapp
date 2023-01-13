@@ -1,0 +1,20 @@
+<!-- <<p>revision-pipe works!</p> --><table class="table">
+    <thead>
+        <tr>
+            <th>srNo</th>
+            <th>name</th>
+            <th>city</th>
+            <th>state</th>
+        </tr>
+    </thead>
+
+        <tbody>
+            <tr *ngFor="let f of frnd">
+                <td>{{f.srNo}}</td>
+                <td>{{f.name|uppercase}}</td>
+                <td>{{f.city|uppercase}}</td>
+                <td>{{f.state|lowercase}}</td>
+             </tr>
+            </tbody>
+     
+        </table>

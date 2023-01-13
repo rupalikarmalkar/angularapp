@@ -18,5 +18,4 @@ export class ChildoutputComponent implements OnInit {
   addtofood(value){
     this.foodevent.emit(value)
   }
-
 }

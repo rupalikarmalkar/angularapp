@@ -15,7 +15,7 @@ import { OrdersRoutingModule } from './orders-routing.module';
   ]
 })
 export class OrdersModule { 
-  constructor() {
-    console.log('OrdersModule loaded');
-  }
+  // constructor() {
+  //   console.log('OrdersModule loaded');
+  // }
 }

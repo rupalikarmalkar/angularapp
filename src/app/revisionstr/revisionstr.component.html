@@ -1,0 +1,23 @@
+<!-- <p>revisionstr works!</p> -->
+<!-- string interpolation -->
+<h6>{{name}}</h6>
+<!-- variable and fun is call in string interpolation -->
+<h4>she is {{status}}  and she is always {{statusCall()}}</h4>
+<!--in ts allowstatus is false  it is true  then it is enable  -->
+<button [disabled]="!allowStatus"  (click)="workStatus()"  class="btn btn-success">Click me</button>
+<div>{{isWork}}</div>
+<hr>
+
+<div>
+    <h4>Two wayData Binding</h4>
+    <label>Add company Name </label>
+
+    <input name="name" id="id" placeholder="enter name" [(ngModel)]="compName">
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{compName}}
+<hr>
+<div>Enter name in text box and after enter ie keyup event print on page
+     <label>Enter name</label><input name="" id="" #nid (keyup.enter)="onEnterKey(nid.value)"></div><br>
+    <button class="btn btn-primary" (click)="onEnterKey(nid.value)">Show</button>
+     <strong> <mark>{{uname}}</mark> 
+</strong> 

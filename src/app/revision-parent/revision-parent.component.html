@@ -1,0 +1,26 @@
+<p>revision-parent works!</p>
+<!-- <app-revision-child  [takeData]="pTocData" (myOutput) ="GetChildData($event)" ></app-revision-child>
+<h4>child data :{{myOutput}}</h4>  -->
+<!-- <app-revision-child  [childArray]="frnd"></app-revision-child> -->
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>srNo</th>
+            <th>name</th>
+            <th>city</th>
+            <th>state</th>
+        </tr>
+    </thead>
+
+        <tbody>
+            <tr *ngFor="let f of newData">
+                <td>{{f.srNo}}</td>
+                <td>{{f.name}}</td>
+                <td>{{f.city}}</td>
+                <td>{{f.state}}</td>
+             </tr>
+            </tbody>
+     
+        </table>
+        <app-revision-child [passData]="GetChildData(value)"></app-revision-child>
