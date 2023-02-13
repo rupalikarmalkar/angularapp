@@ -77,7 +77,15 @@ import { RevisionParentComponent } from './revision-parent/revision-parent.compo
 import { RevisionChildComponent } from './revision-child/revision-child.component';
 import { RevisionPipeComponent } from './revision-pipe/revision-pipe.component';
 import { RevisionTempFormComponent } from './revision-temp-form/revision-temp-form.component';
-// import { ValidateEqualModule } from 'ng-validate-equal';
+import { RevisionReactiveFormComponent } from './revision-reactive-form/revision-reactive-form.component';
+import { AssDashbordModule } from './ass-dashbord/ass-dashbord.module';
+import { MainPageComponent } from './ass-dashbord/main-page/main-page.component';
+import { LoginPageComponent } from './ass-dashbord/login-page/login-page.component';
+import { AdvanceBookingComponent } from './advance-booking/advance-booking.component';
+import { FoodItemComponent } from './food-item/food-item.component';
+import { ReactiveFormAssignmentComponent } from './reactive-form-assignment/reactive-form-assignment.component';
+import { ReactiveFormTaskComponent } from './reactive-form-task/reactive-form-task.component';
+// g// import { ValidateEqualModule } from 'ng-validate-equal';
 
 @NgModule({
   declarations: [
@@ -149,13 +157,23 @@ import { RevisionTempFormComponent } from './revision-temp-form/revision-temp-fo
     RevisionChildComponent,
     RevisionPipeComponent,
     RevisionTempFormComponent,
+    RevisionReactiveFormComponent,
+    MainPageComponent,
+    LoginPageComponent,
+    AdvanceBookingComponent,
+    FoodItemComponent,
+    ReactiveFormAssignmentComponent,
+    ReactiveFormTaskComponent
+
     
     
     
   ],
   imports: [
-    
+
     BrowserModule,
+    AssDashbordModule,
+
     //  ValidateEqualModule,
     FashionsModule,
     AppRoutingModule,

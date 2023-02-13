@@ -1,0 +1,24 @@
+/* img{
+    height: 25%;
+    width: 25%;
+} */
+.card{
+    display: inline-block;
+    margin: 35px 25px 25px;
+     width: 25%;
+    height: 25%; 
+    text-align: center;
+    /* margin-left: 20px; */
+} 
+.abc{
+    text-align: center;
+    margin-left: 350px;
+}
+h5{
+    color: blue;
+}
+pre{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 10px;
+}

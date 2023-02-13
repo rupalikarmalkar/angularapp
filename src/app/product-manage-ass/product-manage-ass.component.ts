@@ -69,6 +69,7 @@ this.stydents=JSON.parse(data)
 
 
   ngOnInit() {
+    this.onFetchStudent()
   }
 
 }

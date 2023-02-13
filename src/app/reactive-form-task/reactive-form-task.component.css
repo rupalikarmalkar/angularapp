@@ -1,0 +1,16 @@
+.container{
+    border: double 5px;
+    /* background-image: url("C:\angular\angularApp\angularapp\4.jpg"); */
+    background-image: url("C:\Users\hp\Desktop\angularapp\angularapp\src\assets\image\butter.jpg");
+    font-size: larger;
+    font-weight: bolder;
+    background-repeat: no-repeat;
+    width: 900px;
+    
+
+    
+}
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+    box-shadow: 0 0 13px #ff000021;
+}

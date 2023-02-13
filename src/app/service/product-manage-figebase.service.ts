@@ -1,6 +1,7 @@
 import { HttpClient,  HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,6 +18,8 @@ export class ProductManageFigebaseService {
 
   }
   fetchStudents(){
-    return this._http.get(this.url)
+
+  return this._http.get(this.url)
+
   }
 }

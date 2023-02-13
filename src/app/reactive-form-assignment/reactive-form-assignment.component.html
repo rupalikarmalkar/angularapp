@@ -1,0 +1,96 @@
+<!-- <p>reactive-form-assignment works!</p> -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+             <h2>Reactive Form Example</h2>
+             <button (click)="onAddUser()" class="btn btn-success mt-4" >Add user </button>
+
+
+            <form  *ngIf="isShow"  [formGroup]="registerForm" (ngSubmit)="OnSubmit()">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" formControlName="fname" class="form-control" id="fname" 
+                    placeholder="Enter First name">
+                </div>  
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" formControlName="lname" class="form-control" id="lname" 
+                    placeholder="Enter last name">
+                </div>  
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" formControlName="email" class="form-control" id="email" 
+                    placeholder="Enter email name">
+                </div>  
+                <div class="form-group">
+                    <label>Phone </label>
+                    <input type="number" formControlName="phone" class="form-control" id="phone" 
+                    placeholder="Enter user name">
+                </div>  
+                <div class="form-group">
+                    <div *ngFor="let gender of genders" class="custom-control custom-radio">
+                     <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}" [ngModel]="defaultGender" class="custom-control-input">
+                     <label for="{{gender.id}}" class="custom-control-label">{{gender.value}}</label>
+                    </div>
+                </div>
+                <div>
+                    <label>DOB</label>&nbsp;&nbsp;
+                    <input type="date">
+                </div>
+                <div class="form-group">
+                    <label>Company</label>
+                    <input type="text" formControlName="company" class="form-control" id="company" 
+                    placeholder="Enter Company name">
+                </div>  
+                
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" formControlName="password" class="form-control" id="password" 
+                    placeholder="Enter user name">
+                </div>  
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" formControlName="cpsw" class="form-control" id="cpsw" 
+                    placeholder="Enter user name">
+                </div>  
+                
+                <button class="btn btn-primary mt-4">Register</button>&nbsp;&nbsp;
+                <button class="btn btn-danger mt-4">cancel</button>
+
+
+
+
+            </form>
+            <table  class=" table table-striped" >
+                <thead class="thead-dark">
+                    <tr>
+                        <th> First name</th>
+                        <th> Last Name </th>
+                        <th> Email </th>
+                        <th> Phone </th>
+                        <th>Company</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr *ngFor="let e of addUser  let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{e.fname}}</td>
+                        <td>{{e.lName}}</td>
+                        <td>{{e.email}}</td>
+                        <td>{{e.phone}}</td>
+                        <td>{{e.company}}</td>
+
+                        <!-- <td><button type="button" class="btn1 btn-secondary btn-lg"  (click)="remove(i)" >Delete</button></td> -->
+                        <button class="btn btn-danger mt-4">Delete</button>
+
+                        
+                    </tr>
+                </tbody>
+            </table>
+        
+        </div>
+    </div>
+</div>

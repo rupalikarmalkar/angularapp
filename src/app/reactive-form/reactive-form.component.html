@@ -9,7 +9,8 @@
 
                     <div class="form-group">
                         <label>User Name</label>
-                        <input type="text" formControlName="username" class="form-control" id="username" placeholder="Enter user name">
+                        <input type="text" formControlName="username" class="form-control" id="username" 
+                        placeholder="Enter user name">
                         <small class="text-danger" *ngIf="!myReactiveForm.get('userDetails.username').valid && myReactiveForm.get('userDetails.username').touched">
                             <small class="text-danger" *ngIf="myReactiveForm.get('userDetails.username').errors['required']">Please enter user name</small>
                             <small class="text-danger" *ngIf="myReactiveForm.get('userDetails.username').errors['namesNotAllowed']"> User name not allowed {{myReactiveForm.get('userDetails.username').value}}</small>

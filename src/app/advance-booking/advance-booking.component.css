@@ -1,0 +1,43 @@
+.abc{
+    background-image: url('C:\Users\hp\Desktop\v1.jpg');
+   
+        background-repeat: no-repeat;
+        height: 800px;
+        width: 70%;
+        background-size: cover;
+        margin-left: 200px;
+    
+}
+.booking{
+    text-align: center;
+    margin-top: 100px;
+}
+#btn1{
+    height: 10px;
+    width: 70px;
+}
+input{
+    width: 300px;
+    height: 50px;
+    border-right: 0ch;
+    border-color: rgb(221, 158, 158);
+    box-shadow: 2px 3px;
+    
+
+}
+/* button{
+
+} */
+#date{
+    margin-top: 10px;
+margin-left: 360px;
+padding-right:90px ;
+}
+#time{
+    padding-right:100px ;
+
+}
+#guest{
+    padding-right:70px ;
+  
+}
