@@ -59,6 +59,8 @@ export class ProductManageAssComponent implements OnInit {
 const data = JSON.stringify(res)
 // console.log(data);
 this.stydents=JSON.parse(data)
+console.log(data);
+
 }
       // (err)=>console.log(err)
       

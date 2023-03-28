@@ -85,7 +85,15 @@ import { AdvanceBookingComponent } from './advance-booking/advance-booking.compo
 import { FoodItemComponent } from './food-item/food-item.component';
 import { ReactiveFormAssignmentComponent } from './reactive-form-assignment/reactive-form-assignment.component';
 import { ReactiveFormTaskComponent } from './reactive-form-task/reactive-form-task.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // g// import { ValidateEqualModule } from 'ng-validate-equal';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { AuthComponent } from './auth/auth.component';
+import {MatButtonModule} from '@angular/material/button';
+import { LoddingSpinnerComponent } from './shared/lodding-spinner/lodding-spinner.component';
+import { AuthontocationAuthorizationComponent } from './authontocation-authorization/authontocation-authorization.component';
+import { JesonTaskComponent } from './jeson-task/jeson-task.component';
+
 
 @NgModule({
   declarations: [
@@ -163,7 +171,11 @@ import { ReactiveFormTaskComponent } from './reactive-form-task/reactive-form-ta
     AdvanceBookingComponent,
     FoodItemComponent,
     ReactiveFormAssignmentComponent,
-    ReactiveFormTaskComponent
+    ReactiveFormTaskComponent,
+    AuthComponent,
+    LoddingSpinnerComponent,
+    AuthontocationAuthorizationComponent,
+    JesonTaskComponent
 
     
     
@@ -181,9 +193,11 @@ import { ReactiveFormTaskComponent } from './reactive-form-task/reactive-form-ta
     ReactiveFormsModule,
     HttpClientModule,
     UtilityModule,
+    BrowserAnimationsModule,
     // HttpHeaders
     
-
+    MatSlideToggleModule,
+    MatButtonModule
 
     // SharedModule
   ],

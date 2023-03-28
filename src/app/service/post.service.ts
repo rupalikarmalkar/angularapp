@@ -9,6 +9,7 @@ import { devAPIurl } from 'src/environments/environment';
 export class PostService {
 
   constructor(private httpClient:HttpClient) { }
+
   getposts():Observable<any>{
     return this.httpClient.get(`${devAPIurl}posts`)
   }
@@ -20,3 +21,4 @@ export class PostService {
     return this.httpClient.delete(`${devAPIurl}posts/` +id) 
   }
 }
+   

@@ -20,6 +20,7 @@ import { UnSavedChangesGuard } from './un-saved-changes.guard';
 const routes: Routes = [
     {path:'', redirectTo: 'loginn', pathMatch:'full'},
     {path:'loginn', component:LoginnComponent},
+    
     { path: 'home', component: HomeComponent }, // localhost://4200
     { path:'aboutus',  component: AboutusComponent} ,// localhost://4200/aboutus
     

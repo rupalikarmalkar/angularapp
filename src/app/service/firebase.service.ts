@@ -23,6 +23,7 @@ users:any[]=[
     }
       return this._httpClient.post(this.url +'post.json',postData)
   }
+  
   createPostDataReactiveForm(fireBasePost:FireBasePost){
     return this._httpClient.post(this.url +'post.json',fireBasePost)
 

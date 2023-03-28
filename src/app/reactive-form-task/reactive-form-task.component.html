@@ -15,8 +15,7 @@
                     <small class="text-danger"
                         *ngIf="myReactiveForm.get('name').invalid && myReactiveForm.get('name').touched">Enter
                         first name </small>
-
-                </div>
+                 </div>
                 <div class="form-group">
                     <label for="lname">Last Name</label>
                     <input type="text" placeholder="enter last name" name="lname" class="form-control"
@@ -94,28 +93,13 @@
                             *ngIf="myReactiveForm.get('password').value != myReactiveForm.get('cPassword').value">
                             password Mismatched</small>
                     </small>
-
-                    
-
-
                 </div>
-
                 <button class="btn btn-secondary mt-4" (click)="onsubmitUser()"> Register</button>&nbsp;
                 <button class="btn btn-secondary mt-4" (click)="dataAllClear()"> Cancel</button>
             </form>
-
-
-
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
 <table class=" table table-striped">
     <thead class="thead-dark">
         <tr>

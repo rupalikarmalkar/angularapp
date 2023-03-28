@@ -44,6 +44,7 @@
                     <th scope="col">Name</th>
                     <th scope="col">Course</th> 
                     <th scope="col">Delete</th> 
+                    <!-- <th scope="col">Edit</th> -->
 
                     </tr>
                 </thead>
@@ -53,9 +54,8 @@
                         <td>{{s.id}}</td>
                         <td>{{s.name}}</td>
                         <td>{{s.course}}</td>
-                        <td (click)="onDeleteStudent(i)"><a class="text-danger"><i class="fa-solid fa-trash"></i>  </a></td>
-                        <!-- <i class="fa-solid fa-trash-can"></i> -->
-                        <!-- <i class="fa-solid fa-trash"></i> -->
+                        <td (click)="onDeleteStudent(i)"><a class="text-danger"><i class="fa-solid fa-trash"></i></a></td>
+                        <!-- <td (click)="onEditStudent(i)"><a class="text-danger"><i class="fa-solid fa-comment-pen"></i></a></td> -->
 
 
 
